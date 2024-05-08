@@ -60,20 +60,17 @@ echo "" >> tmpfile
 echo "$LOG" >> tmpfile
 echo "" >> tmpfile
 echo "" >> tmpfile
-cat changelog.md >> tmpfile
-mv tmpfile changelog.md
+cat CHANGELOG.MD >> tmpfile
+mv tmpfile CHANGELOG.MD
 
 
 
 # update and push changelog
-git add changelog.md
+git add CHANGELOG.MD
 git commit -m "Update changelog for version $VERSION"
-git push
 
 # create and commit tag with version name
 git tag $VERSION
-git push origin $VERSION
-
 # update and push last-release-version.txt
 echo $VERSION > last-release-version.txt
 # update all occurence of last version in the README.md to the new version
@@ -81,4 +78,6 @@ sed -i "" "s/$LAST_VERSION/$VERSION/g" README.md
 git add README.md
 git add last-release-version.txt
 git commit -m "Update last release version to $VERSION"
-git push
+
+# push all changes to the remote
+git push origin $VERSION
