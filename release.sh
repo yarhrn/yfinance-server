@@ -37,8 +37,8 @@ fi
 
 
 
-docker buildx build --platform linux/amd64 -t yarhrn/yfinance-server:$VERSION --push .
-docker buildx build --platform linux/arm64 -t yarhrn/yfinance-server:$VERSION --push .
+# docker buildx build --platform linux/amd64 -t yarhrn/yfinance-server:$VERSION --push .
+# docker buildx build --platform linux/arm64 -t yarhrn/yfinance-server:$VERSION --push .
 
 # read commit changes from last version to current version
 LOG=$(git log --pretty=format:"%h %s" v$LAST_VERSION..HEAD)
@@ -61,7 +61,7 @@ git push origin $VERSION
 # update and push last-release-version.txt
 echo $VERSION > last-release-version.txt
 # update all occurence of last version in the README.md to the new version
-sed -i "s/$LAST_VERSION/$VERSION/g" README.md
+sed -i "" "s/$LAST_VERSION/$VERSION/g" README.md
 git add README.md
 git add last-release-version.txt
 git commit -m "Update last release version to $VERSION"
