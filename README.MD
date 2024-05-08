@@ -10,7 +10,7 @@ Latest release version: `0.10.0`
 #### Via Docker
 
 ```bash
-docker run -p 8000.10.00 -d --name yfinance-server yfinance-server:0.10.0
+docker run -p 8000:8000 -d --name yfinance-server yfinance-server:0.10.0
 ```
 
 #### Via Python
