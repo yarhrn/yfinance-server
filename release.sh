@@ -41,13 +41,24 @@ fi
 # docker buildx build --platform linux/arm64 -t yarhrn/yfinance-server:$VERSION --push .
 
 # read commit changes from last version to current version
-LOG=$(git log --pretty=format:"%h %s" v$LAST_VERSION..HEAD)
+LOG=$(git log --pretty=format:"%h %s" $LAST_VERSION..HEAD)
 # read yfinance version from requirements.txt
 YFINANCE_VERSION=$(grep yfinance requirements.txt | cut -d'=' -f2)
 
-# add current version including yfinance version section to changelog
-awk -v v=$VERSION -v log="$LOG" -v yv=$YFINANCE_VERSION '/^## /{print "## " v " (" strftime("%Y-%m-%d") ")"; print ""; print "### yfinance version: " yv; print ""; print log; print ""; print $0; next}1' changelog.md > tmp
-mv tmp changelog.md
+# add to the change log
+# current version as a header
+# version of yfinance
+# all commit logs since last version
+echo "## $VERSION" > tmpfile
+echo "" >> tmpfile
+echo "### Dependencies" >> tmpfile
+echo "" >> tmpfile
+echo "- yfinance: $YFINANCE_VERSION" >> tmpfile
+echo "" >> tmpfile
+echo "### Changes" >> tmpfile
+echo "" >> tmpfile
+echo "$LOG" >> tmpfile
+
 
 # update and push changelog
 git add changelog.md
