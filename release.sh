@@ -58,6 +58,11 @@ echo "" >> tmpfile
 echo "### Changes" >> tmpfile
 echo "" >> tmpfile
 echo "$LOG" >> tmpfile
+echo "" >> tmpfile
+echo "" >> tmpfile
+cat changelog.md >> tmpfile
+mv tmpfile changelog.md
+
 
 
 # update and push changelog

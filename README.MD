@@ -3,14 +3,14 @@
 A simple server that fetches stock data from Yahoo Finance and returns it in JSON format
 using the [yfinance](https://github.com/ranaroussi/yfinance) library.
 
-Latest release version: `0.5.0`
+Latest release version: `0.6.0`
 
 ### How to use
 
 #### Via Docker
 
 ```bash
-docker run -p 8000:8000 -d --name yfinance-server yfinance-server:0.5.0
+docker run -p 8000:8000 -d --name yfinance-server yfinance-server:0.6.0
 ```
 
 #### Via Python
