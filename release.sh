@@ -37,8 +37,8 @@ fi
 
 
 
-# docker buildx build --platform linux/amd64 -t yarhrn/yfinance-server:$VERSION --push .
-# docker buildx build --platform linux/arm64 -t yarhrn/yfinance-server:$VERSION --push .
+docker buildx build --platform linux/amd64 -t yarhrn/yfinance-server:$VERSION --push .
+docker buildx build --platform linux/arm64 -t yarhrn/yfinance-server:$VERSION --push .
 
 # read commit changes from last version to current version
 LOG=$(git log --pretty=format:"%h %s" $LAST_VERSION..HEAD)
