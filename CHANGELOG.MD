@@ -1,3 +1,15 @@
+## 0.9.0
+
+### Dependencies
+
+- yfinance: 0.2.38
+
+### Changes
+
+785d350 change
+1e86b66 Update last release version to 0.8.0
+
+
 ## 0.8.0
 
 ### Dependencies
