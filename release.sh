@@ -75,7 +75,7 @@ git tag $VERSION
 echo $VERSION > last-release-version.txt
 # update all occurence of last version in the README.md to the new version
 sed -i "" "s/$LAST_VERSION/$VERSION/g" README.md
-git add README.md
+git add README.MD
 git add last-release-version.txt
 git commit -m "Update last release version to $VERSION"
 
