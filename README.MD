@@ -3,7 +3,7 @@
 A simple server that fetches stock data from Yahoo Finance and returns it in JSON format
 using the [yfinance](https://github.com/ranaroussi/yfinance) library.
 
-Latest release version: `0.0.0`
+Latest release version: `0.0.1`
 
 ### How to use
 
