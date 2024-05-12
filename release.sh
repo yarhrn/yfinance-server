@@ -36,12 +36,12 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 
-
-docker buildx build --platform linux/amd64 -t yarhrn/yfinance-server:$VERSION --push .
-docker buildx build --platform linux/arm64 -t yarhrn/yfinance-server:$VERSION --push .
+docker buildx build --platform linux/amd64,linux/arm64 -t yarhrn/yfinance-server:$VERSION -t yarhrn/yfinance-server:latest --push .
 
 # read commit changes from last version to current version
+# add two new lines to the end of the each line in the commit log
 LOG=$(git log --pretty=format:"%h %s" $LAST_VERSION..HEAD)
+LOG=$(echo "$LOG" | sed -e 's/$/  /g')
 # read yfinance version from requirements.txt
 YFINANCE_VERSION=$(grep yfinance requirements.txt | cut -d'=' -f2)
 

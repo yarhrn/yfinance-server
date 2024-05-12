@@ -37,7 +37,7 @@ class InvokeRequest(BaseModel):
 def read_root():
     # read version from file
     version = None
-    with open('version.txt') as f:
+    with open('last-release-version.txt') as f:
         version = f.read().strip()
 
     yfinanceVersion = yf.__version__
