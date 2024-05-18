@@ -79,5 +79,6 @@ git add last-release-version.txt
 git commit -m "Update last release version to $VERSION"
 
 git push origin $VERSION
+git push origin main
 
 docker buildx build --platform linux/amd64,linux/arm64 -t yarhrn/yfinance-server:$VERSION -t yarhrn/yfinance-server:latest --push .
