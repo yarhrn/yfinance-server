@@ -56,7 +56,7 @@ def read_item(request: InvokeRequest, x_api_key: Annotated[str | None, Header()]
             raise HTTPException(
                 status_code=401, detail="API key is missing"
             )
-        if x_api_key != apiKey1 and api_key != apiKey2:
+        if x_api_key != apiKey1 and x_api_key != apiKey2:
             raise HTTPException(
                 status_code=403, detail="API key is invalid"
             )

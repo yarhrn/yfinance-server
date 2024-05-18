@@ -36,7 +36,6 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 
-docker buildx build --platform linux/amd64,linux/arm64 -t yarhrn/yfinance-server:$VERSION -t yarhrn/yfinance-server:latest --push .
 
 # read commit changes from last version to current version
 # add two new lines to the end of the each line in the commit log
@@ -79,5 +78,6 @@ git add README.MD
 git add last-release-version.txt
 git commit -m "Update last release version to $VERSION"
 
-# push all changes to the remote
 git push origin $VERSION
+
+docker buildx build --platform linux/amd64,linux/arm64 -t yarhrn/yfinance-server:$VERSION -t yarhrn/yfinance-server:latest --push .
