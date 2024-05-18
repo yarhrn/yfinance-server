@@ -3,7 +3,7 @@
 A simple server that fetches stock data from Yahoo Finance and returns it in JSON format
 using the [yfinance](https://github.com/ranaroussi/yfinance) library.
 
-Latest release version: `0.0.1`
+Latest release version: `0.0.2`
 
 ### How to use
 
@@ -277,10 +277,10 @@ The server will try to init `yt.Ticker(symbol)` and call `method` with `params` 
   "recommendationMean": 2.1,
   "recommendationKey": "buy",
   "numberOfAnalystOpinions": 39,
-  "totalCash": 67150000128,
+  "totalCash": 67150.0.228,
   "totalCashPerShare": 4.379,
   "ebitda": 129629003776,
-  "totalDebt": 104590000128,
+  "totalDebt": 104590.0.228,
   "quickRatio": 0.875,
   "currentRatio": 1.037,
   "totalRevenue": 381623009280,
