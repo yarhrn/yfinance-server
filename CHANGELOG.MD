@@ -1,3 +1,15 @@
+## 0.0.3
+
+### Dependencies
+
+- yfinance: 0.2.38
+
+### Changes
+
+c5eeeae fix type with second api key  
+180bf77 Update last release version to 0.0.2  
+
+
 ## 0.0.2
 
 ### Dependencies
