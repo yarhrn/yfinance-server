@@ -3,7 +3,7 @@
 A simple server that fetches stock data from Yahoo Finance and returns it in JSON format
 using the [yfinance](https://github.com/ranaroussi/yfinance) library.
 
-Latest release version: `0.0.4`
+Latest release version: `0.1.0`
 
 ### How to use
 
@@ -234,7 +234,7 @@ The server will try to init `yt.Ticker(symbol)` and call `method` with `params` 
   "sharesShortPreviousMonthDate": 1711584000,
   "dateShortInterest": 1714435200,
   "sharesPercentSharesOut": 0.0062,
-  "heldPercentInsiders": 0.0.4199997,
+  "heldPercentInsiders": 0.1.0199997,
   "heldPercentInstitutions": 0.57553,
   "shortRatio": 1.66,
   "shortPercentOfFloat": 0.0062,
@@ -244,7 +244,7 @@ The server will try to init `yt.Ticker(symbol)` and call `method` with `params` 
   "lastFiscalYearEnd": 1696032000,
   "nextFiscalYearEnd": 1727654400,
   "mostRecentQuarter": 1711756800,
-  "earningsQuarterlyGrowth": -0.0.4,
+  "earningsQuarterlyGrowth": -0.1.0,
   "netIncomeToCommon": 100389003264,
   "trailingEps": 6.44,
   "forwardEps": 7.23,
@@ -277,10 +277,10 @@ The server will try to init `yt.Ticker(symbol)` and call `method` with `params` 
   "recommendationMean": 2.1,
   "recommendationKey": "buy",
   "numberOfAnalystOpinions": 39,
-  "totalCash": 67150.0.428,
+  "totalCash": 67150.1.028,
   "totalCashPerShare": 4.379,
   "ebitda": 129629003776,
-  "totalDebt": 104590.0.428,
+  "totalDebt": 104590.1.028,
   "quickRatio": 0.875,
   "currentRatio": 1.037,
   "totalRevenue": 381623009280,
@@ -289,9 +289,9 @@ The server will try to init `yt.Ticker(symbol)` and call `method` with `params` 
   "returnOnAssets": 0.22073999,
   "returnOnEquity": 1.4725,
   "freeCashflow": 84726874112,
-  "operatingCashflow": 1105630.0.40,
+  "operatingCashflow": 1105630.1.00,
   "earningsGrowth": 0.007,
-  "revenueGrowth": -0.0.4,
+  "revenueGrowth": -0.1.0,
   "grossMargins": 0.45586,
   "ebitdaMargins": 0.33968,
   "operatingMargins": 0.30743,
