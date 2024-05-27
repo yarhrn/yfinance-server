@@ -1,3 +1,15 @@
+## 0.1.0
+
+### Dependencies
+
+- yfinance: 
+
+### Changes
+
+281201e bump version of yfinance  
+342dcdf Update last release version to 0.0.4  
+
+
 ## 0.0.4
 
 ### Dependencies
